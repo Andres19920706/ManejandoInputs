@@ -44,16 +44,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void resetearContador (View vista){
-
         //Extraemos el valor del cuadro de texto
         EditText numero_reset = (EditText) findViewById(R.id.n_reseteo);
-        //Lo almacenamos como entero
-        contador = Integer.parseInt(numero_reset.getText().toString());
-        //Lo mostramos por pantalla
-        textoResultado.setText(""+contador);
-
-
-
+        try {
+            contador = Integer.parseInt(numero_reset.getText().toString());
+            //Lo almacenamos como entero
+        }catch (Exception e){
+            contador = 0;
+        }
+        finally {
+            //Lo mostramos por pantalla
+            textoResultado.setText(""+contador);
+        }
     }
 
 
