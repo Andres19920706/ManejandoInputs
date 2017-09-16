@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="es.ujaen.ssmm.manejandoinputs.MainActivity">
+
+    <TextView
+        android:id="@+id/textTitule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contador"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textValueContador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="36sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintTop_toBottomOf="@+id/textTitule"
+        tools:layout_constraintLeft_creator="1" />
+
+    <Button
+        android:id="@+id/buttonIncre"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="59dp"
+        android:text="+"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="59dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonDecre"
+        tools:layout_constraintBaseline_creator="1"
+        android:onClick="incrementaContador"/>
+
+    <Button
+        android:id="@+id/buttonDecre"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="74dp"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintLeft_toRightOf="@+id/buttonIncre"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginTop="185dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="decrementaContador"/>
+
+    <Button
+        android:id="@+id/buttonRest"
+        style="@android:style/Widget.Button.Toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resetear"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        android:onClick="resetearContador"
+        app:layout_constraintHorizontal_bias="0.111" />
+
+    <EditText
+        android:id="@+id/n_reseteo"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginStart="8dp"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="0"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintLeft_toRightOf="@+id/buttonRest"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintBottom_creator="1" />
+
+    <CheckBox
+        android:id="@+id/idNegativo"
+        style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginStart="8dp"
+        android:checked="false"
+        android:text="Conteo Negativo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toRightOf="@+id/n_reseteo"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
